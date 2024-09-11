@@ -1,0 +1,13 @@
+Flask 
+Flask-PyMongo
+Flask-Cors
+PyJWT 
+bcrypt
+pymongo
+python-dotenv
+DateTime
+regex
+langchain-groq
+langchain-core
+jsons
+jwt
