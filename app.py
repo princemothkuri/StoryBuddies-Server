@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_pymongo import PyMongo
 from flask_cors import CORS
 from routes.auth import auth_bp
@@ -22,6 +22,11 @@ def create_app():
     # Register Blueprints
     app.register_blueprint(auth_bp)
     app.register_blueprint(chat_bp)
+
+    # Default route to check if the server is working
+    @app.route('/')
+    def index():
+        return jsonify({"message": "Server is running!"})
 
     return app
 
