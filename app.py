@@ -17,7 +17,7 @@ def create_app():
     PyMongo(app)
 
     # Enable CORS
-    CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+    CORS(app, resources={r"/*": {"origins": "*"}})
 
     # Register Blueprints
     app.register_blueprint(auth_bp)
@@ -32,4 +32,4 @@ def create_app():
 
 if __name__ == '__main__':
     app = create_app()
-    app.run(debug=True, port=5000)
+    app.run(debug=False, host='0.0.0.0')
