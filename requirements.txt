@@ -10,5 +10,4 @@ regex
 langchain-groq
 langchain-core
 jsons
-jwt
 gunicorn
