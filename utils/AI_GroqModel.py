@@ -18,7 +18,7 @@ from .create_new_session import create_new_session
 groq_api_key = os.getenv("GROQ_API_KEY")
 model = ChatGroq(
     temperature=0,
-    model="llama3-70b-8192",
+    model="llama-3.3-70b-versatile",
     api_key=groq_api_key,
     verbose=True,
 )
